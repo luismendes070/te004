@@ -1,0 +1,56 @@
+body{
+	
+}
+
+
+legend{
+    color: green;
+}
+
+button {
+    color: green;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+}
+
+textarea {
+    float: right;
+}
+
+input{
+	float: right;
+}
+
+th{
+	float: right;
+}
+
+label{
+	text-decoration: underline;
+	
+}
+
+textarea{
+	margin-left: 10px;
+	float: right;
+}
+
+div{
+	padding: 10px;
+	margin: 10px;
+	float: center;
+	background-color: lightgrey;
+}
+
+br{
+	background-color: lightgrey;
+}
+
+#voltar{
+	float:left;
+}
+
+#salvar{
+	float:right;
+}

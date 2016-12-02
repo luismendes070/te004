@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>Pesquisar Sistema</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="te004.css">
+</head>
+
+<body>
+    <!-- TE004 - Alterar Sistema -->
+    <div>
+        <br> Manter Sistema <span style="color:red; float:right"> *Campo obrigatório</span> <br>
+    </div>
+
+    <!-- 
+   
+   Descrição							___________________________________
+   Sigla								___________________________________
+   E-mail de atendimento do sistema     ___________________________________
+   
+   -->
+    <br><br>
+    <form action="te004.php" method="post">
+        <fieldset>
+            <legend> Dados do Sistema </legend>
+
+            <!-- 
+				alfanumérico pattern="[a-zA-Z0-9]+" 
+		 -->
+
+            <br> Descrição<span style="color:red;">*</span> <input type="text" name="descricao" pattern="[a-zA-Z0-9]+" size="100" placeholder="Descrição do sistema" required>
+            <hr><br>
+            <br> Sigla<span style="color:red;">*</span> <input type="text" name="sigla" pattern="[a-zA-Z0-9]+" size="10" placeholder="Sigla do sistema" required>
+            <hr><br>
+            <br> E-mail de atendimento do sistema <input type="email" name="email_sistema" pattern="[a-zA-Z0-9]+@+[a-zA-Z0-9].[a-zA-Z0-9]" size="100" placeholder="E-mail de atendimento do sistema">
+            <hr><br>
+            <br> URL <input type="url" name="email_sistema" size="50" pattern="[a-zA-Z0-9]+" placeholder="URL de acesso ao sistema">
+            <hr><br>
+
+        </fieldset>
+    </form>
+
+
+    <!-- 
+   
+   Status							___________________________________
+   Usuário responsável pela última alteração___________________________________
+   Data da última alteração         ___________________________________
+   Justificativa da última alteração___________________________________
+   
+   -->
+
+
+    <br><br>
+    <form action="te004.php">
+        <fieldset>
+            <legend> Controle do Sistema </legend>
+
+            <!-- Linha Status -->
+
+            <br><br>Status<span style="color:red;">*</span>
+            <select name="status" style="width:50%;; float:right" ; placeholder="Status do sistema" required>
+					<option value="ativo">ATIVO</option>
+				</select>
+
+            <!-- Linha  -->
+            <hr><br>
+
+
+
+            <br>Usuário responsável pela última alteração<input type="text" name="usuario_sistema" style="width:50%;" size="100" placeholder="Nome do usuário responsável pela última alteração no sistema" readonly>
+            <!-- readonly não editável -->
+            <hr><br>
+
+            <br>Data da última alteração<input type="datetime-local" name="email_sistema" style="width:50%;">
+            <hr>
+
+            <br> Justificativa da última alteração
+            <textarea name="justicativa_anterior" size="500" maxlength="200"></textarea>
+            <hr>
+            <br>
+
+            <!-- Linha  -->
+
+            <br> Nova justificativa de alteração
+            <textarea name="nova_justicativa" size="500" maxlength="200" required></textarea>
+            <hr>
+            <br>
+
+            <br><span style="color:green; text-decoration: underline;">Quantidade de caracteres disponíveis: 200</span>
+            <hr><br>
+
+        </fieldset>
+    </form>
+
+    <!-- Voltar Salvar-->
+
+
+    <button id="voltar" placeholder="Descarta os dados informados e retorna a página de pesquisa"> Voltar </button>
+    <button id="salvar" placeholder="Salva os dados do sistema"> Salvar </button>
+
+
+</body>
